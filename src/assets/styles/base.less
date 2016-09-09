@@ -1,0 +1,48 @@
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: RobotoRegular, "Helvetica Neue", Helvetica, "Microsoft YaHei", sans-serif;
+  font-size: 14px;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+img, button {
+  border: none;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-full {
+  flex: 0 0 100%;
+}
+.flex-half {
+  flex: 0 0 50%;
+}
+.flex-auto {
+  flex: auto;
+}
+.flex-none {
+  flex: none;
+}
