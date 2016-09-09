@@ -13,8 +13,8 @@ Vue.use(VueRouter)
 const router = new VueRouter({history: true})
 // 路由映射到各个组件
 router.map(RouteMap)
-/* eslint-disable no-new */
-new Vue({
-  el: 'body',
-  components: { App }
-})
+
+// 启动应用！
+// 路由器会创建一个 App 实例，并且挂载到选择符 app 匹配的元素上。
+// app document.querySelector(“app”);
+router.start(App, 'app')

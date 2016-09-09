@@ -18,7 +18,7 @@ export default {
 
 <style lang="css" scoped>
   footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 200px;
     right: 0;

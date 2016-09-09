@@ -2,8 +2,9 @@
   <aside class="sidebar-wrapper">
     <section>
       <ul>
-        <li>2</li>
-        <li>2</li>
+        <!-- 使用指令 v-link 进行导航。 -->
+        <li><a v-link="{ path: '/' }">主页</a></li>
+        <li><a v-link="{ path: '/notfound' }">找不到</a></li>
         <li>2</li>
         <li>2</li>
         <li>2</li>
@@ -35,5 +36,7 @@ export default {
     left: 0;
     right: 0px;
     background-color: #222;
+    color: #fff;
+    padding: 10px 20px;
   }
 </style>

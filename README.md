@@ -50,7 +50,12 @@ npm test
 
 > 配置路由
 
+[vue-router详情](http://router.vuejs.org/zh-cn/index.html)
+
 ```bash
 # 安装vue-router
 npm install vue-router --save-dev
 ```
+在页面中使用<vue-router></vue-router>
+
+把路由映射到各个组件，vue-router 会把各个组件渲染到正确的地方
