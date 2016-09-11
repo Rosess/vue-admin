@@ -21,10 +21,6 @@ export default {
 
 <style lang="css">
 .content-wrapper {
-  position: absolute;
-  top: 50px;
-  left: 200px;
-  right: 0;
-  bottom: 0;
+  flex: 1;
 }
 </style>

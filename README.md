@@ -46,6 +46,12 @@ npm run e2e
 npm test
 ```
 
+# CSS flex
+
+> CSS flex
+
+[Flexbox指南](http://www.w3cplus.com/css3/a-guide-to-flexbox-new.html)
+
 # vue-router
 
 > 配置路由

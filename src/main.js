@@ -5,12 +5,12 @@ import VueRouter from 'vue-router'
 import App from 'src/layout/App'
 import RouteMap from 'src/config/route'
 
-// 安装路由模块
+// 安装路由模块 注册/扩展vue的路由这一发法
 Vue.use(VueRouter)
 // 创建一个路由器实例
 // 创建实例时可以传入配置参数进行定制
 // history 管理浏览历史记录
-const router = new VueRouter({history: true})
+const router = new VueRouter({history: true})// ???
 // 路由映射到各个组件
 router.map(RouteMap)
 

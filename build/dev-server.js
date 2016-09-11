@@ -2,7 +2,7 @@ var path = require('path')
 var express = require('express') //
 var webpack = require('webpack')
 var config = require('../config')
-var proxyMiddleware = require('http-proxy-middleware')
+var proxyMiddleware = require('http-proxy-middleware') // ????
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
   : require('./webpack.dev.conf')
@@ -46,7 +46,7 @@ Object.keys(proxyTable).forEach(function (context) {
 app.use(require('connect-history-api-fallback')()) //
 
 // serve webpack bundle output
-app.use(devMiddleware) 
+app.use(devMiddleware)
 
 // enable hot-reload and state-preserving
 // compilation error display

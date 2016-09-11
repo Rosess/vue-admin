@@ -1,5 +1,9 @@
 <template lang="html">
-  <footer>Welcome to your Vue.js app!</footer>
+  <footer>
+    <div class="footer-content">
+      Welcome to your Vue.js!
+    </div>
+  </footer>
 </template>
 
 <script>
@@ -18,11 +22,16 @@ export default {
 
 <style lang="css" scoped>
   footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     left: 200px;
     right: 0;
-    height: 50px;
-    background-color: #ccc;
+    height: 45px;
+    text-align: center;
+  }
+  .footer-content {
+    margin: 0 10px;
+    line-height: 42px;
+    border-top: 3px double #E5E5E5;
   }
 </style>

@@ -1,12 +1,10 @@
 <template>
-<div id="app">
-  <!-- <section class="wrapper"> -->
-    <header-layout></header-layout>
+  <header-layout></header-layout>
+  <section class="body-wrapper">
     <sidebar-layout></sidebar-layout>
     <content-layout></content-layout>
     <footer-layout></footer-layout>
-  <!-- </section> -->
-</div>
+  </section>
 </template>
 
 <script>
@@ -26,3 +24,13 @@ export default {
 </script>
 
 <style lang="less" src="src/assets/styles/base.less"></style>
+<style scoped>
+  .body-wrapper {
+    position: relative;
+    display: flex;
+    min-height: calc(100vh - 0px);
+    /*得到取100%身高*/
+
+    padding-top: 45px
+  }
+</style>

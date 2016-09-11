@@ -3,6 +3,6 @@ import NotFound from 'views/not-found'
 
 export default{
   '/': { component: Home },
-  '/notfound': { component: NotFound },
-  '*': {component: NotFound}
+  '/not-found': { component: NotFound },
+  '/*': {component: NotFound}
 }

@@ -1,15 +1,13 @@
 <template lang="html">
   <aside class="sidebar-wrapper">
-    <section>
-      <ul>
-        <!-- 使用指令 v-link 进行导航。 -->
-        <li><a v-link="{ path: '/' }">主页</a></li>
-        <li><a v-link="{ path: '/notfound' }">找不到</a></li>
-        <li>2</li>
-        <li>2</li>
-        <li>2</li>
-      </ul>
-    </section>
+    <ul class="sidebar-content">
+      <!-- 使用指令 v-link 进行导航。 -->
+      <li><a v-link="{ path: '/' }">主页</a></li>
+      <li><a v-link="{ path: '/not-found' }">找不到</a></li>
+      <li>2</li>
+      <li>2</li>
+      <li>2</li>
+    </ul>
   </aside>
 </template>
 
@@ -30,13 +28,10 @@ export default {
 <style lang="css" scoped>
   .sidebar-wrapper {
     width: 200px;
-    position: absolute;
-    top: 50px;
-    bottom: 0;
-    left: 0;
-    right: 0px;
-    background-color: #222;
-    color: #fff;
+    background-color: #f2f2f2;
+    color: #585858;
+  }
+  .sidebar-content {
     padding: 10px 20px;
   }
 </style>
