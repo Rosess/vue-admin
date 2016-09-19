@@ -3,6 +3,7 @@
     <ul class="sidebar-content">
       <!-- 使用指令 v-link 进行导航。 -->
       <li><a v-link="{ path: '/' }">主页</a></li>
+      <li><a v-link="{ path: '/img' }">图片</a></li>
       <li><a v-link="{ path: '/not-found' }">找不到</a></li>
       <li>2</li>
       <li>2</li>

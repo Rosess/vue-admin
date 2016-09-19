@@ -1,6 +1,6 @@
 var config = require('../config')
 var webpack = require('webpack')
-var merge = require('webpack-merge')
+var merge = require('webpack-merge') // 连接数组和合并对象  合併設定檔使用
 var utils = require('./utils')
 var baseWebpackConfig = require('./webpack.base.conf')
 var HtmlWebpackPlugin = require('html-webpack-plugin')

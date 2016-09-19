@@ -1,7 +1,9 @@
 var path = require('path')
 var config = require('../config')
+// 为了区分开用<link>链接和用<style>，以CSS后缀结尾的模块用插件
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
+// 根据环境的不同设置不同的资源路径
 exports.assetsPath = function (_path) {
   var assetsSubDirectory = process.env.NODE_ENV === 'production'
     ? config.build.assetsSubDirectory
@@ -26,6 +28,9 @@ exports.cssLoaders = function (options) {
     }).join('!')
 
     if (options.extract) {
+      // 在ExtractTextPlugin的extract方法有两个参数，
+      // 第一个参数是经过编译后通过style-loader单独提取出文件来，
+      // 第二个参数就是用来编译代码的loader。
       return ExtractTextPlugin.extract('vue-style-loader', sourceLoader)
     } else {
       return ['vue-style-loader', sourceLoader].join('!')
