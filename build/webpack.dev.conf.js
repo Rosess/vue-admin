@@ -17,6 +17,7 @@ module.exports = merge(baseWebpackConfig, {
   // eval-source-map is faster for development
   devtool: '#eval-source-map',
   plugins: [
+    //  DefinePlugin 定义一些全局的变量,通过定义不同的变量值，使我们在开发和发布的时候执行不同的代码。
     new webpack.DefinePlugin({
       'process.env': config.dev.env
     }),

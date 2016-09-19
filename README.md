@@ -51,15 +51,20 @@ npm test
     - index.js
     - prod.env.js
     - test.env.js
-- src
+- dist 目标文件夹，保存最终生成的js文件，图片等
+- node_modules 这个是npm包（不要上传到git中）
+- src main.js（主js）
+    - assets 项目里用到的公用css、js、图片、插件的css和js
+    - components 放各个页面的组件
+    - views 各个页面的视图（由components中的组件拼装而成）
 - static
 - .babelrc
 - .editorconfig
 - .eslintignore
 - .eslintrc.js
-- .gitignore
-- index.html
-- package.json
+- .gitignore 用于git提交时的忽略项设置（不用github的可忽略这个文件）
+- index.html index.html模板
+- package.json 定义依赖的nodejs模块
 
 
 

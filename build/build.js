@@ -1,6 +1,7 @@
 // https://github.com/shelljs/shelljs
-require('shelljs/global')
-env.NODE_ENV = 'production'
+// 全局模式，用于实现 Unix shell 命令执行
+require('shelljs/global') // shelljs 模块重新包装了 child_process，调用系统命令更加方便
+env.NODE_ENV = 'production' // 设置环境变量为“production”
 
 var path = require('path')
 var config = require('../config')
