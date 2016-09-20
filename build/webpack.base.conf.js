@@ -63,10 +63,10 @@ module.exports = {
       },
       // 转化ES6语法
       {
-        test: /\.js$/, // test值为正则表达式，当文件路径匹配时启用
-        loader: 'babel', // 指定使用什么loader，可以用字符串，也可以用数组
-        include: projectRoot, // 需要转行的文件
-        exclude: /node_modules/  //可以使用exclude来排除一部分文件
+        test: /\.js$/, // test值为正则表达式，当文件路径匹配时启用(必须)
+        loader: 'babel', // 指定使用什么loader，可以用字符串，也可以用数组(必须)
+        include: projectRoot, // 手动添加必须处理的文件（文件夹）
+        exclude: /node_modules/  //屏蔽不需要处理的文件（文件夹）可以使用exclude来排除一部分文件
       },
       {
         test: /\.json$/,

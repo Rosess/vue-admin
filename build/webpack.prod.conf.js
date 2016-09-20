@@ -4,6 +4,7 @@ var utils = require('./utils')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var baseWebpackConfig = require('./webpack.base.conf')
+// 分离CSS和JS文件
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 var env = process.env.NODE_ENV === 'testing'
@@ -31,13 +32,16 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
+    // 解析/压缩/美化所有的js chunk
     new webpack.optimize.UglifyJsPlugin({
       compress: {
-        warnings: false
+        warnings: false  // 在压缩js是不报warning
       }
     }),
+    // 为组件分配ID，通过这个插件webpack可以分析和优先考虑使用最多的模块，并为它们分配最小的ID
     new webpack.optimize.OccurenceOrderPlugin(),
     // extract css into its own file
+    // 分离CSS和JS文件
     new ExtractTextPlugin(utils.assetsPath('css/[name].[contenthash].css')),
     // generate dist index.html with correct asset hash for caching.
     // you can customize output by editing /index.html
@@ -48,16 +52,19 @@ var webpackConfig = merge(baseWebpackConfig, {
         : config.build.index,
       template: 'index.html',
       inject: true,
+      // 压缩html
       minify: {
-        removeComments: true,
-        collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeComments: true, // 移除注释
+        collapseWhitespace: true, // 移除换行和空格
+        removeAttributeQuotes: true // 删除引号属性
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
+      // 通过CommonsChunkPlugin必须始终使用多个块
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
       chunksSortMode: 'dependency'
     }),
+    // 提取代码中的公共模块，然后将公共模块打包到一个独立的文件中，以便在其他的入口和模块中使用
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',

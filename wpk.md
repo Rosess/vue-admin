@@ -74,4 +74,5 @@ Express结合Webpack的全栈自动刷新
 
 > Provides a fallback for non-existing directories so that the HTML 5 history API can be used.
 
-# HTML 5 history API
+# webpack常用插件
+[详情链接](http://www.jianshu.com/p/1eefaeaf6874)
