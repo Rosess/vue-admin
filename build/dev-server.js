@@ -1,20 +1,20 @@
 // http://www.cnblogs.com/donglegend/p/5821092.html
 
-var path = require('path')  // 引入 Node.js Path，模块， 用于处理文件路径的小工具
-var express = require('express') // 引入 Node.js Express 框架，使用 Express 可以快速地搭建一个完整功能的网站。
+var path = require('path')  // 引入 Node.js Path模块， 用于处理文件路径
+var express = require('express') // 引入 Node.js Express框架，使用 Express可以快速地搭建一个完整功能的网站。
 var webpack = require('webpack')
 var config = require('../config') // 分别配置 build 和 dev，用于配置环境、入口文件等 build打包后生成的路径 dev端口号
 var proxyMiddleware = require('http-proxy-middleware') // Node.js 代理中间件 for connect, express 和 browser-sync。
 // Node.js process对象  全局对象
-// process.env属性返回一个对象，包含了当前Shell的所有环境变量
+// process.env属性返回一个对象，包含了当前Shell的所有环境变量????
 // 新建一个环境变量NODE_ENV  生产阶段设为production，开发阶段设为develop或staging
 // 读取 process.env.NODE_ENV
 var webpackConfig = process.env.NODE_ENV === 'testing'
   ? require('./webpack.prod.conf')
-  : require('./webpack.dev.conf')
+  : require('./webpack.dev.conf')  // ???????  process.env.NODE_ENV什么时候定义的
 
 // 默认端口监听dev传入流量
-// process.env.POR ？？？？
+// process.env.PORT ？？？？
 // default port where dev server listens for incoming traffic
 var port = process.env.PORT || config.dev.port
 // Define HTTP proxies to your custom API backend
@@ -24,10 +24,11 @@ var proxyTable = config.dev.proxyTable
 
 var app = express() // 调用express函数
 var compiler = webpack(webpackConfig) // 编译器 不同的环境编译不同的文件
+// webpack()返回值是什么
 
 // 使用 webpack-dev-middleware 插件
 // webpack中间件 处理静态资源的middleware
-var devMiddleware = require('webpack-dev-middleware')(compiler, {
+var devMiddleware = require('webpack-dev-middleware')(compiler, {  // 返回值是什么
   // 中间件绑定一个公共路径
   publicPath: webpackConfig.output.publicPath,
   // options for formating the statistics
