@@ -31,12 +31,13 @@ export default {
   .body-wrapper {
     position: relative;
     display: flex;
-    min-height: calc(100vh - 0px);
+    /*min-height: calc(100vh - 0px);*/
     /*得到取100%身高*/
 
     padding-top: 45px
   }
   .content-wrapper {
     flex: 1;
+    min-height: calc(100vh - 45px);
   }
 </style>

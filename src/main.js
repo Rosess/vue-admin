@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 
 import App from 'src/layout/App'
 import RouteMap from 'src/config/route'
+import 'font-awesome/css/font-awesome.min.css'
 
 // 安装路由模块 注册/扩展vue的路由这一发法
 Vue.use(VueRouter)

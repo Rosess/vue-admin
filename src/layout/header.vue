@@ -2,7 +2,11 @@
   <header class="header-wrapper">
     <a v-link="{path: '/'}">Vue Admin</a>
     <div class="header-items">
-      登录
+      <ul class="nav ace-nav">
+        <li><i class="ace-icon fa fa-tasks"></i></li>
+        <li><i class="ace-icon fa fa-bell"></i></li>
+        <li><i class="ace-icon fa fa-envelope"></i></li>
+      </ul>
     </div>
   </header>
 </template>
@@ -39,9 +43,17 @@ export default {
     text-shadow: none;
   }
   .header-items {
-    /*flex: 1;*/
     justify-content: flex-end;
     box-flex: 1;
     flex: auto;
+  }
+  .nav {
+    float: right;
+  }
+  .nav li {
+    float: left;
+    width: 40px;
+    color: #fff;
+    font-size: 16px;
   }
 </style>

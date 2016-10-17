@@ -31,6 +31,7 @@ export default {
     width: 200px;
     background-color: #f2f2f2;
     color: #585858;
+    min-height: calc(100vh - 45px);
   }
   .sidebar-content {
     padding: 10px 20px;
