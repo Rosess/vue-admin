@@ -2,6 +2,7 @@ var path = require('path')
 var config = require('../config')
 // 分离CSS和JS文件的插件
 // 为了区分开用<link>链接和用<style>，以CSS后缀结尾的模块用插件
+// 将样式抽取成独立的文件         
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 // 根据环境的不同设置不同的资源路径

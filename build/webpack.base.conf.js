@@ -37,7 +37,7 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
-  // 进行字符串的处理
+  // Loader加载器
   module: {
     // preLoaders在调用loader之前需要调用的loader,他不做任何代码的转换，只是进行检查。
     preLoaders: [

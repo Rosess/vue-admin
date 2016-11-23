@@ -2,8 +2,10 @@
   <header class="header-wrapper">
     <a v-link="{path: '/'}">Vue Admin</a>
     <div class="header-items">
-      <ul class="nav ace-nav">
-        <li><i class="ace-icon fa fa-tasks"></i></li>
+      <ul class="nav">
+        <li><i class="ace-icon fa fa-tasks"></i>
+          <drop-view></drop-view>
+        </li>
         <li><i class="ace-icon fa fa-bell"></i></li>
         <li><i class="ace-icon fa fa-envelope"></i></li>
       </ul>
@@ -50,10 +52,15 @@ export default {
   .nav {
     float: right;
   }
-  .nav li {
+  .nav > li {
+    position:relative;
     float: left;
-    width: 40px;
+    width: 60px;
     color: #fff;
     font-size: 16px;
+    text-align: center;
+  }
+  .nav > li:first-child {
+    background-color: #555;
   }
 </style>
